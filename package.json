@@ -1,0 +1,24 @@
+{
+  "name": "devfreelas",
+  "version": "1.0.0",
+  "description": "Projeto do curso 'Método .NET Direto ao Ponto'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernas1104/DevFreelas.git"
+  },
+  "keywords": [
+    "back-end",
+    "api",
+    "dotnet"
+  ],
+  "author": "Bernardo C. Nascimento",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bernas1104/DevFreelas/issues"
+  },
+  "homepage": "https://github.com/bernas1104/DevFreelas#readme"
+}
