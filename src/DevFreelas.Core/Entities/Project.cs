@@ -56,5 +56,40 @@ namespace DevFreelas.Core.Entities
 
             Comments = new List<ProjectComment>();
         }
+
+        public void Start()
+        {
+            StartedAt = DateTime.Now;
+            Status = ProjectStatus.InProgress;
+        }
+
+        public void Finish()
+        {
+            FinishedAt = DateTime.Now;
+            Status = ProjectStatus.Finished;
+        }
+
+        public void Cancel()
+        {
+            if (
+                Status == ProjectStatus.Created || 
+                Status == ProjectStatus.InProgress
+            )
+            {
+                Status = ProjectStatus.Cancelled;
+            }
+        }
+
+        public void SetPendingPayment()
+        {
+            Status = ProjectStatus.Pending;
+        }
+
+        public void Update(string title, string description, decimal totalCost)
+        {
+            Title = title;
+            Description = description;
+            TotalCost = totalCost;
+        }
     }
 }
