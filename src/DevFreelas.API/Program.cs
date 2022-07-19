@@ -1,4 +1,8 @@
+using DevFreelas.Infrastructure;
+using DevFreelas.Infrastructure.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DevFreelasDB");
 
 // Add services to the container.
 
@@ -7,7 +11,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services
+    .AddInfrastructure(connectionString);
+
+builder.Services.AddHealthChecks()
+    .AddSqlServer(connectionString)
+    .AddDbContextCheck<DevFreelasDbContext>();
+
 var app = builder.Build();
+
+app.MapHealthChecks("/health");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

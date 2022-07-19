@@ -26,7 +26,7 @@
         "/Views": "${workspaceFolder}/Views"
       },
       "launchSettingsProfile": "DevFreelas.API",
-      "launchSettingsFilePath": "${workspaceFolder}/Properties/launchSettings.json"
+      "launchSettingsFilePath": "${workspaceFolder}/src/DevFreelas.API/Properties/launchSettings.json"
     },
     {
       "name": ".NET Core Attach",
