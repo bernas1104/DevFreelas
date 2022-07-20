@@ -1,8 +1,11 @@
+using DevFreelas.Application.InputModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreelas.API.Controllers
 {
+    [ApiController]
     [Route("api/v1/[controller]")]
+    [Produces("application/json")]
     public class UsersController : ControllerBase
     {
         private readonly ILogger<UsersController> _logger;
@@ -13,21 +16,21 @@ namespace DevFreelas.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] object model)
+        public Task<IActionResult> Post([FromBody] CreateUserInputModel model)
         {
-            return NoContent();
+            throw new NotImplementedException();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public Task<IActionResult> GetById([FromRoute] int id)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpPost("authenticate")]
-        public async Task<IActionResult> Authenticate([FromBody] object model)
+        public Task<IActionResult> Authenticate([FromBody] object model)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
     }
 }

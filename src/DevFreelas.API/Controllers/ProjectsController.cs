@@ -1,8 +1,11 @@
+using DevFreelas.Application.InputModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreelas.API.Controllers
 {
+    [ApiController]
     [Route("api/v1/[controller]")]
+    [Produces("application/json")]
     public class ProjectsController : ControllerBase
     {
         private readonly ILogger<ProjectsController> _logger;
@@ -13,54 +16,56 @@ namespace DevFreelas.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] int query)
+        public Task<IActionResult> Get([FromQuery] int query)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] object model)
+        public Task<IActionResult> Post([FromBody] NewProjectInputModel model)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public Task<IActionResult> GetById([FromRoute] int id)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(
-            [FromRoute] int id, 
-            [FromBody] object model
+        public Task<IActionResult> Put(
+            [FromRoute] int id,
+            [FromBody] UpdateProjectInputModel model
         )
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        public Task<IActionResult> Delete([FromRoute] int id)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpPost("{id}/comments")]
-        public async Task<IActionResult> PostComment([FromBody] object model)
+        public Task<IActionResult> PostComment(
+            [FromBody] CreateCommentInputModel model
+        )
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpPut("{id}/start")]
-        public async Task<IActionResult> Start([FromRoute] int id)
+        public Task<IActionResult> Start([FromRoute] int id)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
 
         [HttpPut("{id}/finish")]
-        public async Task<IActionResult> Finish([FromRoute] int id)
+        public Task<IActionResult> Finish([FromRoute] int id)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
     }
 }
