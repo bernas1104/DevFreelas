@@ -19,8 +19,8 @@ namespace DevFreelas.Core.Entities
         public List<ProjectComment> Comments { get; private set; }
 
         public Project(
-            string title, string description, 
-            Guid clientId, Guid freelancerId, 
+            string title, string description,
+            Guid clientId, Guid freelancerId,
             decimal totalCost
         )
         {
@@ -37,7 +37,7 @@ namespace DevFreelas.Core.Entities
         }
 
         public Project(
-            Guid id, string title, string description, 
+            Guid id, string title, string description,
             Guid clientId, Guid freelancerId, decimal totalCost,
             int status, DateTime createdAt, DateTime updatedAt,
             DateTime? startedAt = null, DateTime? finishedAt = null
@@ -72,7 +72,7 @@ namespace DevFreelas.Core.Entities
         public void Cancel()
         {
             if (
-                Status == ProjectStatus.Created || 
+                Status == ProjectStatus.Created ||
                 Status == ProjectStatus.InProgress
             )
             {

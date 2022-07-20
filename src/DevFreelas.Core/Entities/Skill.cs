@@ -14,7 +14,7 @@ namespace DevFreelas.Core.Entities
         }
 
         public Skill(
-            Guid id, string description, 
+            Guid id, string description,
             DateTime createdAt, DateTime updatedAt
         ) : base(id)
         {

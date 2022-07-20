@@ -28,7 +28,7 @@ namespace DevFreelas.Core.Entities
         }
 
         public User(
-            Guid id, string fullName, string email, DateTime birthDate, 
+            Guid id, string fullName, string email, DateTime birthDate,
             bool active, DateTime createdAt, DateTime updatedAt
         ) : base(id)
         {

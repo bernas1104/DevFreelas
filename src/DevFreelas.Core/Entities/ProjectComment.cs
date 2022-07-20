@@ -20,8 +20,8 @@ namespace DevFreelas.Core.Entities
         }
 
         public ProjectComment(
-            Guid id, string content, Guid projectId, 
-            Guid userId, DateTime createdAt, DateTime updatedAt, 
+            Guid id, string content, Guid projectId,
+            Guid userId, DateTime createdAt, DateTime updatedAt,
             Project? project, User? user
         ) : base(id)
         {
